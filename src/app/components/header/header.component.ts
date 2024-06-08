@@ -1,11 +1,7 @@
 import { CommonModule } from "@angular/common"
 import { Component } from '@angular/core';
 import { RouterModule } from "@angular/router"
-
-interface HeaderItem {
-  name: string;
-  link: string;
-}
+import { IHeaderItem } from "../../interfaces/headerItem.interface"
 
 @Component({
   selector: 'app-header',
@@ -16,9 +12,9 @@ interface HeaderItem {
 
 export class HeaderComponent {
   public shopName: string = "Games Shop"
-  public headerItems: HeaderItem[]  = [{
+  public headerItems: IHeaderItem[]  = [{
     name: "Home",
-    link: "/"
+    link: "/home"
   }, {
     name: "Games",
     link: "/games"

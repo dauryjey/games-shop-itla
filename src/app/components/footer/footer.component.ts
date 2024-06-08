@@ -1,11 +1,6 @@
 import { CommonModule } from "@angular/common"
 import { Component } from '@angular/core';
-
-interface SocialLink {
-  name: string;
-  url: string;
-  svg: string;
-}
+import { ISocialLink } from "../../interfaces/socialLink.interface"
 
 @Component({
   selector: 'app-footer',
@@ -14,7 +9,7 @@ interface SocialLink {
   templateUrl: './footer.component.html',
 })
 export class FooterComponent {
-  public socialLinks: SocialLink[] = [
+  public socialLinks: ISocialLink[] = [
     {
       name: 'Twitter',
       url: 'https://twitter.com/',
